@@ -39,7 +39,7 @@ public class Scanner {
         this.source = source;
     }
 
-    List<Token> scanTokens() {
+    public List<Token> scanTokens() {
         while (!isAtEnd()){
             start = current;
             scanToken();
@@ -112,6 +112,7 @@ public class Scanner {
     private void addToken(TokenType type) {
         addToken(type, null);
     }
+
     private boolean match(char expected) {
         if (isAtEnd()) return false;
         if (source.charAt(current) != expected) return false;
@@ -173,8 +174,8 @@ public class Scanner {
         return (c >= 'a' && c <= 'z') ||
                 (c >= 'A' && c <= 'Z') ||
                 c == '_';
-
     }
+
     private boolean isAlphanumeric(char c) {
         return isAlpha(c) || isDigit(c);
     }
@@ -186,6 +187,4 @@ public class Scanner {
        if (type == null) type = IDENTIFIER;
        addToken(type);
     }
-
-
 }
