@@ -1,6 +1,4 @@
-package core;
-
-import java.util.List;
+package lox;
 
 abstract class Expr {
  interface Visitor<R> {

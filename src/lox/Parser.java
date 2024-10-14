@@ -1,8 +1,8 @@
-package core;
+package lox;
 
 import java.util.List;
 
-import static core.TokenType.*;
+import static lox.TokenType.*;
 
 public class Parser {
     private static class ParseError extends RuntimeException {}

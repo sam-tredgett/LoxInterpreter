@@ -1,4 +1,4 @@
-package core;
+package lox;
 
 public class AstPrinter implements Expr.Visitor<String> {
     // Temporary main method.

@@ -1,11 +1,11 @@
-package core;
+package lox;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static core.TokenType.*;
+import static lox.TokenType.*;
 public class Scanner {
     private int start = 0;
     private int current = 0;
@@ -162,8 +162,8 @@ public class Scanner {
 
         if (peek() == '.' && isDigit(peekNext())) {
             // consume the "."
-            advance();
-            while (isDigit(peek())) advance();
+            do advance();
+            while (isDigit(peek()));
         }
 
         addToken(NUMBER,
